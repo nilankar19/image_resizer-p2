@@ -114,10 +114,21 @@ input[type="file" i] {
     width: 100%;
     height: 100%;
     margin:0px 0px 0px 0px;
+    color: aqua;
 }
 
 
+.i_info{
+    width: 34%;
+    height: 80%;
+    border: 1px solid yellow;
+    color: #fff;
+    overflow-x: hidden;
+    padding-top: 2%;
+    padding-left: 2%;
 
+    
+}
 @media only screen and (max-width:620px) {
     .img_pre {
         width: initial;

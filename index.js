@@ -4,16 +4,21 @@ let canvas = document.getElementById('canvas');
 let img ;
 let width; 
 let height;
+let size_s, symbol = ['kb','Mb'];
 let ii = document.getElementById("dummy");
 var ctx = canvas.getContext('2d');
 ctx.drawImage(ii,0,0);
 
-document.getElementById('input').onchange = function(e) {
+let img_size;
+let input = document.getElementById('input');
+input.onchange = function(e) {
   img = new Image();
   img.onload = draw;
   img.onerror = failed;
   img.src = URL.createObjectURL(this.files[0]);
   console.log(img.src);
+  img_size = +Math.round(input.files[0].size/1024);
+   
   
 
 };
@@ -38,6 +43,10 @@ function draw() {
   ctx.drawImage(img,0,0,img.width, img.height)//for resize
   document.getElementById("output").setAttribute('src',`${img.src}`)
  
+  if(img_size>1024){ img_size = +Math.round(img_size/1024); size_s = symbol[1];}else{size_s=symbol[0];}
+  document.getElementById("imginfo2").innerHTML= `width = ${img.width}\n <br> height = ${img.height}<br>  uri = ${img.src} <br> size = ${img_size} ${size_s}`;
+ 
+  
   
   
   // console.log(this.width);
@@ -58,7 +67,8 @@ function  canva_img_uri(canvas){
     // alert(blob.size);
   output_img = Math.round(((blob.size)/1024));
   console.log(output_img);
-  document.getElementById("imginfo").innerHTML=`width = ${canvas.width}\n <br> height = ${canvas.height}<br>  uri = ${img.src} <br> size = ${output_img} kb` ;
+  if(output_img>1024){ output_img = output_img/1024; size_s = symbol[1];}else{size_s=symbol[0];}
+  document.getElementById("imginfo1").innerHTML=`width = ${canvas.width}\n <br> height = ${canvas.height}<br>  uri = ${img.src} <br> size = ${output_img} ${size_s}` ;
 
 });
 }
