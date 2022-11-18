@@ -120,13 +120,20 @@ input[type="file" i] {
 
 @media only screen and (max-width:620px) {
     .img_pre {
-        width: 100%;
+        width: initial;
         margin: 0 0 0 0;
     }
-        .input_box {
+    .input_box {
         width: 50%;
     }
     .user_var {
-        margin: 40% 2px 2px 20%;
+        margin: 25% 2px 2px 10%;
+        width: 80%;
     }
+    #d_button {
+        margin-left: 9%;
+    }
+    .input_labels {
+            margin-right: 2%;
+        }
 }
