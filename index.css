@@ -1,0 +1,27 @@
+.canva{
+    width: 30%;
+    height: 20%;
+    position: relative;
+    margin:0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+    border:1px solid blueviolet;
+    background-position: center;
+    background-size: cover;
+}
+#display-image{
+    width: 400px;
+    height: 225px;
+    border: 1px solid black;
+    background-position: center;
+    background-size: cover;
+  }
+#output{
+    width: 30%;
+    height: 20%;
+    border: 1px solid red;
+}
+.input_box{
+    width: 10%;
+    height: 5%;
+
+}

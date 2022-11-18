@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+
+    <title>image resizer</title>
+</head>
+<body>
+   
+    <input type="file" id="inp">
+    <canvas id="canvas" class="canva"></canvas>
+    <img src="#" alt="op" id="output">
+
+    <input type="number" placeholder="width" value="" id="input_box1" class="input_box">
+    <input type="number" placeholder="height" value="" id="input_box2" class="input_box">
+    <button onclick="user_input_size()">submit</button>
+    <p id="imginfo" ></p>
+
+    <a href="#" id="download" download="hello">
+        <button>download</button>
+    </a>
+<script src="index.js"></script>
+</body>
+</html>
