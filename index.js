@@ -4,6 +4,10 @@ let canvas = document.getElementById('canvas');
 let img ;
 let width; 
 let height;
+let ii = document.getElementById("dummy");
+var ctx = canvas.getContext('2d');
+ctx.drawImage(ii,0,0);
+
 document.getElementById('input').onchange = function(e) {
   img = new Image();
   img.onload = draw;

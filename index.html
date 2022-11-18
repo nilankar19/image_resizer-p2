@@ -15,21 +15,35 @@
  
 <div class="img_pre">
     <canvas id="canvas" class="canva"></canvas>
-    <img src="#" alt="op" id="output">   
+    
+    <img src="img/w.jpg" alt="uploded img" id="output">
 </div>    
-<label class="files">
-    <input type="file" id="input" placeholder="hello">
-    <span id="input_label" >Upload files</span>
-  </label>
+<img src="img/q.png" id="dummy" alt="dummy" style="display: none;">
+
 <div class="user_var">
     <input type="number" placeholder="width" value="" id="input_box1" class="input_box">
     <input type="number" placeholder="height" value="" id="input_box2" class="input_box">
     <button onclick="user_input_size()">submit</button>
-    <p id="imginfo" ></p>
+   
 </div>
+<br>
+<div style="display:flex; flex-direction:row;justify-content: center;">
+    
     <a href="#" id="download" download="hello">
-        <button>download</button>
+        <button class="input_labels" id="d_button"  >Download</button>
     </a>
+    <div style="margin-left: 20px;">
+        <label class="files">
+         <input type="file" id="input" placeholder="hello">
+         <span id="input_label" class="input_labels" >Upload files</span>
+         </label>
+        </div>
+</div>
+<div style="display:flex; flex-direction:row; justify-content:center;">
+<p id="imginfo" ></p>
+<p></p>
+</div>
+
 <script src="index.js"></script>
 </body>
 </html>
