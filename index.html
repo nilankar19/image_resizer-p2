@@ -9,15 +9,24 @@
 </head>
 <body>
    
-    <input type="file" id="inp">
+  
+      
+  
+ 
+<div class="img_pre">
     <canvas id="canvas" class="canva"></canvas>
-    <img src="#" alt="op" id="output">
-
+    <img src="#" alt="op" id="output">   
+</div>    
+<label class="files">
+    <input type="file" id="input" placeholder="hello">
+    <span id="input_label" >Upload files</span>
+  </label>
+<div class="user_var">
     <input type="number" placeholder="width" value="" id="input_box1" class="input_box">
     <input type="number" placeholder="height" value="" id="input_box2" class="input_box">
     <button onclick="user_input_size()">submit</button>
     <p id="imginfo" ></p>
-
+</div>
     <a href="#" id="download" download="hello">
         <button>download</button>
     </a>

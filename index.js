@@ -4,7 +4,7 @@ let canvas = document.getElementById('canvas');
 let img ;
 let width; 
 let height;
-document.getElementById('inp').onchange = function(e) {
+document.getElementById('input').onchange = function(e) {
   img = new Image();
   img.onload = draw;
   img.onerror = failed;

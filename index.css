@@ -1,10 +1,76 @@
+
+.files{
+    position: absolute;
+    display: inline-block;
+    cursor: pointer;
+    margin: 22% 0% 0% 32%;
+    
+}
+
+#input {
+    margin: 0;
+    opacity: 0;
+}
+
+input[type="file" i] {
+    appearance: none;
+    background-color: initial;
+    cursor: default;
+    align-items: baseline;
+    color: inherit;
+    text-overflow: ellipsis;
+    white-space: pre;
+    text-align: start !important;
+    padding: initial;
+    border: initial;
+    overflow: hidden !important;
+}
+
+#input_label {
+    content: "upload";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    height: -38.5rem;
+    padding: 0.5rem 1rem;
+    line-height: 1.5;
+    color: rgb(255, 12, 12);
+    background-color: #fff;
+    border: 0.075rem solid #ddd;
+    border-radius: 0.25rem;
+    box-shadow: inset 0 0.2rem 0.4rem rgb(0 0 0 / 5%);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* image preview------------ */
+.img_pre{
+    width: 50%;
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    /* position: absolute; */
+    border:7px solid rgb(208, 207, 210);
+    border-radius: 20px;
+    margin: 3% 0% 2% 21%;
+    background-color: rgb(255, 255, 255);  
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
 .canva{
-    width: 30%;
-    height: 20%;
-    position: relative;
-    margin:0% 0% 0% 0%;
+    width: 44%;
+    height: 90%;
+    float: left;
+    margin:8px 8px 8px 8px;
     padding: 0% 0% 0% 0%;
-    border:1px solid blueviolet;
+    border:7px solid rgb(208, 207, 210);
+    border-radius: 20px;
     background-position: center;
     background-size: cover;
 }
@@ -16,12 +82,27 @@
     background-size: cover;
   }
 #output{
-    width: 30%;
-    height: 20%;
-    border: 1px solid red;
+    width: 44%;
+    height: 90%;
+    margin:8px 8px 8px 8px;
+    
+    float: left;
+    border:7px solid rgb(208, 207, 210);
+    border-radius: 20px;
 }
 .input_box{
     width: 10%;
     height: 5%;
 
+}
+
+.user_var{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 40%;
+    height: 5%;
+    position: relative;
+    margin:2px 2px 2px 20%;
+    border: 1px solid red;
 }
