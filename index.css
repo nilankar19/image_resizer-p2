@@ -203,7 +203,7 @@ td {
 #submit {  
     /* creates a circular background */
     height: 100%; /* makes the sun the size of the viewport */
-    transition: 1s;
+    transition: 500ms;
     margin: 0% 0% 0% 0%;
     border: 1px solid red;
     background: white; 
