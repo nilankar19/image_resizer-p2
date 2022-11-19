@@ -1,10 +1,13 @@
+#div1{
+    width: 78%;
+    float: left;
+}
 
 .files{
     /* position: absolute; */
     display: inline-block;
     cursor: pointer;
-    /* margin: 22% 0% 0% 32%; */
-    
+    /* margin: 22% 0% 0% 32%; */   
 }
 
 #input {
@@ -115,7 +118,9 @@ input[type="file" i] {
     height: 100%;
     margin:0px 0px 0px 0px;
     color: aqua;
+    transition: 1s;
 }
+
 
 
 .i_info{
@@ -126,9 +131,84 @@ input[type="file" i] {
     overflow-x: hidden;
     padding-top: 2%;
     padding-left: 2%;
+    font-size: 1.7vh;
 
     
 }
+#imginfo1{
+    font-size: 2vh;
+}
+#imginfo2{
+    font-size: 2vh;
+}
+
+/* range selecter ------------- */
+input[type="range"] {
+    appearance: slider-vertical;
+    width: 2%;
+    height: 25%;
+    margin-left: 2%;
+  }
+
+  /* second range */
+#range_label{
+    display: flex;
+    flex-direction: column;
+    float: left;
+    justify-content: space-between;
+    writing-mode: vertical-lr;
+    width: 1%;
+    
+    
+  }
+
+
+table{
+    border: 1px solid #dddddd;
+
+    background: linear-gradient(130deg,#ff7a18,#af002d 41.07%,#319197 76.05%);
+}
+tr{
+   background-color: #f9f9f9;
+}
+th{
+    font-weight: bold;
+    padding: 8px;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: top;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+td {
+    padding: 8px;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid #dddddd;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+
+.size_ratio{
+   
+    background-color: rgb(255, 255, 255);  
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    cursor: pointer;
+}
+
+
+
+#submit {  
+    /* creates a circular background */
+    height: 100%; /* makes the sun the size of the viewport */
+    transition: 1s;
+    margin: 0% 0% 0% 0%;
+    border: 1px solid red;
+    background: white; 
+  }
+  
 @media only screen and (max-width:620px) {
     .img_pre {
         width: initial;
@@ -147,4 +227,22 @@ input[type="file" i] {
     .input_labels {
             margin-right: 2%;
         }
+    .i_info{
+        font-size: 2.6vw;
+    }
+    #box4{
+        margin-top: 4%;
+    }
+    #imginfo1{
+        font-size: 1.8vh;
+    }
+    #imginfo2{
+        font-size: 1.8vh;
+    }
+    #ttabel{
+        display: none;
+    }
+    #div1{
+        width: 100%;
+    }
 }

@@ -12,38 +12,125 @@
   
       
   
- 
-<div class="img_pre">
-    <canvas id="canvas" class="canva"></canvas>
-    
-    <img src="img/w.jpg" alt="uploded img" id="output">
-</div>    
-<img src="img/q.png" id="dummy" alt="dummy" style="display: none;">
+<div  id="div1">
+    <div class="img_pre">
+        <canvas id="canvas" class="canva"></canvas>
+        
+        <img src="img/w.jpg" alt="uploded img" id="output">
+    </div>    
+    <img src="img/q.png" id="dummy" alt="dummy" style="display: none;">
 
-<div class="user_var">
-    <input type="number" placeholder="width" value="" id="input_box1" class="input_box">
-    <input type="number" placeholder="height" value="" id="input_box2" class="input_box">
-    <button onclick="user_input_size()">submit</button>
-   
-</div>
-<br>
-<div style="display:flex; flex-direction:row;justify-content: center;">
-    
-    <a href="#" id="download" download="hello">
-        <button class="input_labels" id="d_button"  >Download</button>
-    </a>
-    <div style="margin-left: 20px;">
-        <label class="files">
-         <input type="file" id="input" placeholder="hello">
-         <span id="input_label" class="input_labels" >Upload files</span>
-         </label>
+    <div class="user_var">
+        <input type="number" placeholder="width" value="" id="input_box1" onchange="num()" class="input_box">
+        <input type="number" placeholder="height" value="" id="input_box2" class="input_box">
+
+        <div id="dd" style="width:10%; height: 100%; margin-left: 0% 0% 0% 40%;">
+            <button id="submit" onmouseenter="change()"  onclick="user_input_size()">submit</button>
         </div>
-</div>
-<div  class="img_pre" style="display:flex; flex-direction:row; justify-content:space-evenly; background-color: black; color: aliceblue;">
-<p  class="i_info">NEW IMAGE <br><br><span id="imginfo1"></span></p>
-<p class="i_info">PREVIOUS IMAGE <br><br> <span id="imginfo2"></span></p>
-</div>
+    
+    </div>
+    <br>
+    <div style="display:flex; flex-direction:row;justify-content: center;">
+        
+        <a href="#" id="download" download="hello">
+            <button class="input_labels" id="d_button"  >Download</button>
+        </a>
+        <div style="margin-left: 20px;">
+            <label class="files">
+            <input type="file" id="input" placeholder="hello">
+            <span id="input_label" class="input_labels" >Upload files</span>
+            </label>
+            </div>
+    </div>
+    <div  class="img_pre" id="box4" style="display:flex; flex-direction:row; justify-content:space-evenly; background-color: black; color: aliceblue;">
+    <p  class="i_info">NEW IMAGE <br><br><span id="imginfo1"></span><br>
+        <span id="image_ss"  style=" display: none; padding: 8%;font-size: 2vh; background-color:white;width: 78%; height: 11%; color: black;"></span></p>
+    <p class="i_info">UPLOADED IMAGE <br><br> <span id="imginfo2"></span><br>
+        <span id="image_s" style=" display:none; padding: 8%;font-size: 2vh; background-color:white;width: 78%; height: 11%; color: black;" ></span></p>
+    </div>
 
+</div>
+<!-- <div>
+    <span id="range_label" >width</span>
+    <input type="range" id="range_value" min="0" max="2000" value="1000" step="5" />
+</div> -->
+
+   
+    <table id="ttabel" style="width: 20%;  position: absolute; margin-left: 67%; float: right;">
+        <tr>
+            <th>Dimensions (width x height)</th>
+            <th>Aspect Ratio</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td class="size_ratio" onmouseover="td_box_hover()" onclick="td_size(320,200)">320 x 200</td>
+            <td>1.6</td>
+            <td>CGA (color)</td>
+        </tr>
+        <tr>
+            <td class="size_ratio" onclick="td_size(500,500)">500 x 500</td>
+            <td>1:1</td>
+            <td>github</td>
+        </tr>
+        <tr>
+            <td class="size_ratio" onclick="td_size(640,200)">640 x 200</td>
+            <td>3.2</td>
+            <td>CGA (monochrome)</td>
+        </tr>
+        <tr>
+            <td class="size_ratio" onclick="td_size(640,350)">640 x 350</td>
+            <td>1.83</td>
+            <td>EGA</td>
+        </tr>
+        <tr>
+            <td class="size_ratio" onclick="td_size(640,480)">640 x 480</td>
+            <td>1.333</td>
+            <td>VGA</td>
+        </tr>
+        <tr>
+            <td class="size_ratio" onclick="td_size(720,348)">720 x 348</td>
+            <td>2.07</td>
+            <td>Hercules</td>
+        </tr>
+        <tr>
+            <td id="" class="size_ratio" onclick="td_size(1024,768)">1024 x 768</td>
+            <td>1.333</td>
+            <td>XGA</td>
+        </tr>
+        <tr>
+            <td class="size_ratio" onclick="td_size(1280,1024)">1280 x 1024</td>
+            <td>1.25</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="size_ratio" onclick="td_size(1366,768)">1366 x 768</td>
+            <td>1.78/16:9</td>
+            <td>widescreen</td>
+        </tr>
+
+        <tr>
+            <td class="size_ratio" onclick="td_size(1600,1200)">1600 x 1200</td>
+            <td>1.333</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="size_ratio" onclick="td_size(1680,1050)">1680 x 1050</td>
+            <td>1.6</td>
+            <td>widescreen</td>
+        </tr>
+        <tr>
+            <td class="size_ratio" onclick="td_size(1920,1200)">1920 x 1200</td>
+            <td>1.6</td>
+            <td>widescreen</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</div>
 <script src="index.js"></script>
+<script src="bhag.js"></script>
 </body>
 </html>
