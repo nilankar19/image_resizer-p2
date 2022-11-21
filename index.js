@@ -44,7 +44,7 @@ function draw() {
   document.getElementById("output").setAttribute('src',`${img.src}`)
 
   
-  document.getElementById("imginfo2").innerHTML= ` width = ${img.width}\n <br> height = ${img.height}<br>  uri = ${img.src} <br> size = ${img_size} ${size_s}</span>`;
+  document.getElementById("imginfo2").innerHTML= `<span style="font-size: 1.8vh;"> width = ${img.width}\n <br> height = ${img.height}<br>  uri = ${img.src} <br> size = ${img_size} ${size_s}</span>`;
  
 }
 function failed() {
@@ -67,6 +67,7 @@ function  canva_img_uri(canvas){
 });
 }
 
+//call fun from tabel
 function td_size(w,h) {
   width = w;
   height= h;
@@ -78,9 +79,8 @@ function td_size(w,h) {
   
   //tabel hover
   function td_box_hover(k) {
-    let t_id_arr =['td_0','td_a','td_b','td_c','td_d','td_e','td_f','td_g','td_h','td_i','td_j','td_k','td_l'];
-    let coloru = '#85FFBD';
-   
+   let t_id_arr =['td_0','td_a','td_b','td_c','td_d','td_e','td_f','td_g','td_h','td_i','td_j','td_k','td_l'];
+   let coloru = '#85FFBD';
    let tdd =  document.getElementById(`${t_id_arr[k]}`);
    tdd.style.backgroundColor=`${coloru}`;
    tdd.style.backgroundImage='linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%)';
