@@ -4,7 +4,7 @@ let canvas = document.getElementById('canvas');
 let img;
 let width; 
 let height;
-let size_s, symbol = ['kb','Mb'];
+let size_s,size_ss, symbol = ['kb','Mb'];
 
 
 let ii = document.getElementById("dummy");
@@ -21,6 +21,7 @@ input.onchange = function(e) {
   img.src = URL.createObjectURL(this.files[0]);
   console.log(img.src);
   img_size = +Math.round(input.files[0].size/1024);
+  if(img_size>1024){ img_size = +Math.round(img_size/1024); size_s = symbol[1];}else{size_s=symbol[0];}
 
 };
 
@@ -42,8 +43,8 @@ function draw() {
   ctx.drawImage(img,0,0,width, height)//for resize
   document.getElementById("output").setAttribute('src',`${img.src}`)
 
-  if(img_size>1024){ img_size = +Math.round(img_size/1024); size_s = symbol[1];}else{size_s=symbol[0];}
-  document.getElementById("imginfo2").innerHTML= `width = ${img.width}\n <br> height = ${img.height}<br>  uri = ${img.src} <br> size = ${img_size} ${size_s}`;
+  
+  document.getElementById("imginfo2").innerHTML= ` width = ${img.width}\n <br> height = ${img.height}<br>  uri = ${img.src} <br> size = ${img_size} ${size_s}</span>`;
  
 }
 function failed() {
@@ -60,8 +61,8 @@ function  canva_img_uri(canvas){
     // alert(blob.size);
   output_img = Math.round(((blob.size)/1024));
   console.log(output_img);
-  if(output_img>1024){ output_img = output_img/1024; size_s = symbol[1];}else{size_s=symbol[0];}
-  document.getElementById("imginfo1").innerHTML=`width = ${canvas.width}\n <br> height = ${canvas.height}<br>  uri = ${img.src} <br> size = ${output_img} ${size_s}` ;
+  if(output_img>1024){ output_img = output_img/1024; size_ss = symbol[1];}else{size_ss=symbol[0];}
+  document.getElementById("imginfo1").innerHTML=`<span style="font-size: 1.8vh;"> width = ${canvas.width}\n <br> height = ${canvas.height}<br>  uri = ${img.src} <br> size = ${output_img} ${size_s} </span>` ;
 
 });
 }
