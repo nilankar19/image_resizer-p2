@@ -84,4 +84,5 @@ function td_size(w,h) {
    let tdd =  document.getElementById(`${t_id_arr[k]}`);
    tdd.style.backgroundColor=`${coloru}`;
    tdd.style.backgroundImage='linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%)';
+   
   }
