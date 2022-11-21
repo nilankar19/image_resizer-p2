@@ -53,7 +53,7 @@ function failed() {
 
 function  canva_img_uri(canvas){
   //get canva img with user define length and width
-  src = canvas.toDataURL("image/png",1.0); 
+  src = canvas.toDataURL("image/jpeg",1.0); 
   document.getElementById("download").setAttribute('href',`${src}`);
 
   //image size of canvas

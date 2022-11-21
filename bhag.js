@@ -12,8 +12,7 @@ function num() {
     final_b = true;
     if (typeof(+n) == 'number') {
         let sr = "0% 0% 0% 0%";
-        s.style.margin= sr;
-        
+        s.style.margin= sr;      
         s.style.backgroundColor=`${coloru}`;
         s.style.backgroundImage='linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%)';
         b = true;
