@@ -44,7 +44,7 @@ function draw() {
   document.getElementById("output").setAttribute('src',`${img.src}`)
 
   
-  document.getElementById("imginfo2").innerHTML= `<span style="font-size: 1.8vh;"> width = ${img.width}\n <br> height = ${img.height}<br>  uri = ${img.src} <br> size = ${img_size} ${size_s}</span>`;
+  document.getElementById("imginfo2").innerHTML= `<span style="font-size: 1.6vh;"> width = ${img.width}\n <br> height = ${img.height}<br>  uri = ${img.src} <br> size = ${img_size} ${size_s}</span>`;
  
 }
 function failed() {
@@ -62,7 +62,7 @@ function  canva_img_uri(canvas){
   output_img = Math.round(((blob.size)/1024));
   console.log(output_img);
   if(output_img>1024){ output_img = output_img/1024; size_ss = symbol[1];}else{size_ss=symbol[0];}
-  document.getElementById("imginfo1").innerHTML=`<span style="font-size: 1.8vh;"> width = ${canvas.width}\n <br> height = ${canvas.height}<br>  uri = ${img.src} <br> size = ${output_img} ${size_ss} </span>` ;
+  document.getElementById("imginfo1").innerHTML=`<span style="font-size: 1.6vh;"> width = ${canvas.width}\n <br> height = ${canvas.height}<br>  uri = ${img.src} <br> size = ${output_img} ${size_ss} </span>` ;
 
 });
 }
