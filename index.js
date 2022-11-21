@@ -62,7 +62,7 @@ function  canva_img_uri(canvas){
   output_img = Math.round(((blob.size)/1024));
   console.log(output_img);
   if(output_img>1024){ output_img = output_img/1024; size_ss = symbol[1];}else{size_ss=symbol[0];}
-  document.getElementById("imginfo1").innerHTML=`<span style="font-size: 1.8vh;"> width = ${canvas.width}\n <br> height = ${canvas.height}<br>  uri = ${img.src} <br> size = ${output_img} ${size_s} </span>` ;
+  document.getElementById("imginfo1").innerHTML=`<span style="font-size: 1.8vh;"> width = ${canvas.width}\n <br> height = ${canvas.height}<br>  uri = ${img.src} <br> size = ${output_img} ${size_ss} </span>` ;
 
 });
 }
@@ -77,14 +77,11 @@ function td_size(w,h) {
   }
   
   //tabel hover
-  function td_box_hover() {
-    // document.getElementById(`${sd}`)
-    switch (k) {
-      case 1:
-        
-        break;
-    
-      default:
-        break;
-    }
+  function td_box_hover(k) {
+    let t_id_arr =['td_0','td_a','td_b','td_c','td_d','td_e','td_f','td_g','td_h','td_i','td_j','td_k','td_l'];
+    let coloru = '#85FFBD';
+   
+   let tdd =  document.getElementById(`${t_id_arr[k]}`);
+   tdd.style.backgroundColor=`${coloru}`;
+   tdd.style.backgroundImage='linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%)';
   }
