@@ -65,7 +65,7 @@ input[type="file" i] {
     border-radius: 20px;
     margin: 3% 0% 2% 21%;
     background-color: rgb(255, 255, 255);  
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    box-shadow: rgb(0 146 255) 0px 1px 2px 0px, rgb(39 255 0 / 76%) 0px 2px 6px 2px;
 }
 .canva{
     width: 44%;
