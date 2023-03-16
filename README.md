@@ -1,5 +1,5 @@
 # image_resizer
-<a href="https://nilankar19.github.io/image_resizer/" ><img
+<a href="https://nilankar19.github.io/image_resizer-p2/" ><img
   src="img/panda.png"
   alt="password generator"
   title="click me"
