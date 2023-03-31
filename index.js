@@ -6,7 +6,7 @@ let img;
 let width;
 let height;
 let size_s, size_ss, symbol = ['kb', 'Mb'];
-
+let img_size_kb;
 // Get canvas context
 var ctx = canvas.getContext('2d');
 
@@ -25,7 +25,7 @@ input.onchange = function(e) {
 
   // Get size of image file
   let img_size_bytes = input.files[0].size;
-  let img_size_kb = Math.round(img_size_bytes / 1024);
+  img_size_kb = Math.round(img_size_bytes / 1024);
   if (img_size_kb > 1024) {
     img_size_kb = Math.round(img_size_kb / 1024);
     size_s = symbol[1];
