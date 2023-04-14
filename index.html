@@ -38,9 +38,16 @@
     <br>
     <div style="display:flex; flex-direction:row;justify-content: center;">
         
-        <a href="#" id="download" download="hello">
+        <div style="display:flex: flex direction:column; justify-content:flex-start;">
+            <a href="#" id="download" download="hello">
             <button class="input_labels" id="d_button"  >Download</button>
         </a>
+             <div style="display:flex; flex-direction:row;justify-content: start;">
+                   <button value="png" style="margin-left:4px; color: white; border: 1px solid green; padding: 4px;" onclick="extenstion(this.value)">png</button>
+                  <button value="jpeg" style="margin-left:4px; color: white; border: 1px solid red ; padding: 4px;" onclick="extenstion(this.value)">jpeg</button>
+            </div>
+        </div>
+        
         <div style="margin-left: 20px;">
             <label class="files">
             <input type="file" id="input" placeholder="hello">
