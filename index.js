@@ -58,11 +58,21 @@ function draw() {
 function failed() {
   console.error("The provided file couldn't be loaded as an Image media");
 }
-//png or hjpg
-function extenstion(type){
-   src = canvas.toDataURL(`image/${type}`, 1.0);
-  document.getElementById("download").setAttribute('href', `${src}`);
+let filename= null
+let type = ''
+function changefileName(){
+  filename = document.getElementById("myInput").value;
+  extenstion(type)
 }
+//png or hjpg
+function extension(types) {
+  type = types;
+  var src = canvas.toDataURL(`image/${type}`, 1.0);
+  var downloadLink = document.getElementById("download");
+  downloadLink.setAttribute('href', src);
+  downloadLink.setAttribute('download', `${filename? filename :'a'}.${type}`);
+}
+
 // Function to get canvas image URI and display image info to user
 function canva_img_uri(canvas) {
 
