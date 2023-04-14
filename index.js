@@ -59,7 +59,7 @@ function failed() {
   console.error("The provided file couldn't be loaded as an Image media");
 }
 //png or hjpg
-function extention(type){
+function extenstion(type){
    src = canvas.toDataURL(`image/${type}`, 1.0);
   document.getElementById("download").setAttribute('href', `${src}`);
 }
