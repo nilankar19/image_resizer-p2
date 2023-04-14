@@ -58,12 +58,14 @@ function draw() {
 function failed() {
   console.error("The provided file couldn't be loaded as an Image media");
 }
-
+//png or hjpg
+function extention(type){
+   src = canvas.toDataURL(`image/${type}`, 1.0);
+  document.getElementById("download").setAttribute('href', `${src}`);
+}
 // Function to get canvas image URI and display image info to user
 function canva_img_uri(canvas) {
-  // Get canvas image with user-defined length and width
-  src = canvas.toDataURL("image/jpeg", 1.0);
-  document.getElementById("download").setAttribute('href', `${src}`);
+
 
   // Get size of canvas image
   canvas.toBlob(function(blob) {
