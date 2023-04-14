@@ -38,15 +38,12 @@
     <br>
     <div style="display:flex; flex-direction:row;justify-content: center;">
         
-        <div style="display:flex: flex direction:column; justify-content:flex-start;">
+        
             <a href="#" id="download" download="hello">
-            <button class="input_labels" id="d_button"  >Download</button>
-        </a>
-             <div style="display:flex; flex-direction:row;justify-content: start;">
-                   <button value="png" style="margin-left:4px; color: white; border: 1px solid green; padding: 4px;" onclick="extenstion(this.value)">png</button>
-                  <button value="jpeg" style="margin-left:4px; color: white; border: 1px solid red ; padding: 4px;" onclick="extenstion(this.value)">jpeg</button>
-            </div>
-        </div>
+              <button class="input_labels" id="d_button"  >Download</button>
+             </a>
+            
+        
         
         <div style="margin-left: 20px;">
             <label class="files">
@@ -54,6 +51,11 @@
             <span id="input_label" class="input_labels" >Upload files</span>
             </label>
             </div>
+    </div></br>
+     <div style="display:flex; flex-direction:row;justify-content: start;">
+                   <button value="png" class="input_labels" style="margin-left:4px; color: black; border: 1px solid green; padding: 4px;" onclick="extenstion(this.value)">png</button>
+                  <button value="jpeg" class="input_labels" style="margin-left:4px; color: black; border: 1px solid red ; padding: 4px;" onclick="extenstion(this.value)">jpeg</button>
+                  <input type='text' class="input_labels" placeholder='name the file..' id="filename" onChange="changefileName()">
     </div>
     <div  class="img_pre" id="box4" style="display:flex; flex-direction:row; justify-content:space-evenly; background-color: black; color: aliceblue;">
     <p class="i_info">NEW IMAGE <br><br><span id="imginfo1"></span><br>
