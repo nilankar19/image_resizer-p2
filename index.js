@@ -62,7 +62,11 @@ let filename = 'a'
 let type = 'png'
 function changefileName(){
   filename = document.getElementById("filename").value;
-  extenstion(type)
+   var src = canvas.toDataURL(`image/${type}`, 1.0);
+  var downloadLink = document.getElementById("download");
+  downloadLink.setAttribute('href', src);
+  downloadLink.setAttribute('download', `${filename}.${type}`);
+  
 }
 //png or hjpg
 function extension(types) {
@@ -70,7 +74,7 @@ function extension(types) {
   var src = canvas.toDataURL(`image/${type}`, 1.0);
   var downloadLink = document.getElementById("download");
   downloadLink.setAttribute('href', src);
-  downloadLink.setAttribute('download', `${filename}.${type}`);
+ 
 }
 
 // Function to get canvas image URI and display image info to user
