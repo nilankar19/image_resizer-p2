@@ -1,0 +1,719 @@
+blockquote {
+    font-style: italic;
+    color: rgba(var(--color-foreground),.75);
+    border-left: none !important;
+}
+.review-heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* row-gap: 24px; */
+
+}
+.review-heading .awfullygood-heading{
+    text-align: center;
+    font-size: 3vw;
+    color: #000;
+    font-weight: 700;
+}
+.review-heading {
+    text-align: center;
+    font-size: 1.8vw;
+    color: #000;
+    font-weight: 600;
+}
+
+
+@media screen and (max-width: 768px) {
+    .review-heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 11px;
+
+}
+.review-heading .awfullygood-heading{
+    text-align: center;
+    font-size: 5vw;
+    color: #000;
+    font-weight: 700;
+}
+.review-heading {
+    text-align: center;
+    font-size: 4.2vw;
+    color: #000;
+    font-weight: 600;
+}
+    .wayfx-ha__join {
+        padding:56px 0 0
+    }
+
+    .wayfx-ha__join h2 {
+        font-size: 24px;
+        margin-bottom: 16px
+    }
+
+    .wayfx-ha__join .wayfx-btn {
+        font-size: 18px;
+        height: 54px
+    }
+
+    .wayfx-ha__join img {
+        height: 400px
+    }
+}
+
+.awfully-review-testimonials {
+    background: #ffffff00;
+    overflow: hidden;
+    color: #000;
+    padding: 84px 0 80px;
+    position: relative
+}
+
+.awfully-review-testimonials::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    /* background-image: linear-gradient(90deg,rgba(0,0,0,0) 0%,rgb(21, 24, 61) 100%); */
+    z-index: 1;
+    transition: all 0.2s ease;
+    pointer-events: none
+}
+
+@media screen and (min-width: 1440px) {
+    .awfully-review-testimonials::after {
+        width:30%
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .awfully-review-testimonials::after {
+        width:0
+    }
+}
+
+.awfully-review-testimonials .awfully-review-testimonials-slider {
+    max-width: 1400px;
+    margin-inline:auto;width: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative
+}
+
+.awfully-review-testimonials .awfully-review-testimonials-slider .awfully__track {
+    overflow: visible
+}
+
+.awfully-review-testimonials .awfully-review-testimonials-slider .awfully__arrows {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    position: absolute;
+    bottom: 0;
+    left: 240px
+}
+
+.awfully-review-testimonials .awfully-review-testimonials-slider .awfully__arrows .awfully__arrow {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border: 2px solid #bfc7cc;
+    position: unset;
+    transform: unset;
+    opacity: 1;
+    border-radius: 0;
+    transition: all 0.2s ease;
+    background: #7D5BA7;
+    border-radius: 116px;
+    width: 54px;
+    padding: -7px;
+    display: flex;
+    height: 54px;
+    padding: 2%;
+    color: white;
+}
+
+.awfully-review-testimonials .awfully-review-testimonials-slider .awfully__arrows .awfully__arrow[disabled] {
+    opacity: .5;
+    cursor: not-allowed
+}
+
+.awfully-review-testimonials .awfully-review-testimonials-slider .awfully__arrows .awfully__arrow svg {
+    width: 28px;
+    height: 28px;
+    object-fit: contain
+}
+
+.awfully-review-testimonials .awfully-review-testimonials-slider .awfully__arrows .awfully__arrow.awfully__arrow--prev {
+    transform: rotate(-180deg)
+}
+
+.awfully-review-testimonials .awfully-review-testimonials-slider .awfully__arrows .awfully__arrow:hover {
+    opacity: .8
+}
+
+.awfully-review-testimonials .awfully-review-testimonials-slider .awfully__arrows .awfully__arrow:active {
+    transform: scale(.9)
+}
+
+.awfully-review-testimonials .awfully-review-testimonials-slider .awfully__arrows .awfully__arrow:active.awfully__arrow--prev {
+    transform: rotate(-180deg) scale(.9)
+}
+
+.awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide {
+    max-width: 748px;
+    min-height: 290px
+}
+
+.awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide blockquote {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 29px;
+    position: relative
+}
+
+.awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide blockquote .image {
+    flex-shrink: 0
+}
+
+.awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide blockquote .image img {
+    width: 192px;
+    height: 192px;
+    object-fit: cover;
+    border-radius: 100vmax;
+    display: block;
+    flex-shrink: 0;
+    border: 2px solid white;
+}
+
+.awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide blockquote .image cite {
+    font-style: normal;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px
+}
+
+.awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide blockquote .image cite span {
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: .03em;
+    font-size: 17px;
+    line-height: 1
+}
+
+.awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide blockquote .image cite small {
+    font-size: 16px;
+    line-height: 1.2;
+    opacity: .75
+}
+
+.awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide blockquote .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    max-width: 527px;
+    font-weight: 600;
+    width: 100%;
+    transition: all 0.2s ease;
+    opacity: 0
+}
+
+.awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide blockquote .content p {
+    font-size: var(--fs,25px);
+    line-height: 1;
+    letter-spacing: .01em;
+}
+
+.awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide blockquote .content cite {
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px
+}
+
+.awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide blockquote .content cite span {
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: .03em;
+    font-size: 17px;
+    line-height: 1
+}
+
+.awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide blockquote .content cite small {
+    font-size: 16px;
+    line-height: 1;
+    opacity: .75
+}
+
+.awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide.upcoming {
+    margin-right: -532px!important
+}
+
+.awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide.upcoming blockquote .content {
+    opacity: 0;
+    max-height: 0
+}
+
+.awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide.is-active {
+    margin-right: 24px!important
+}
+
+.awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide.is-active blockquote .content {
+    opacity: 1;
+    max-height: 1000px
+}
+
+.awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide.passed {
+    margin-right: 24px!important
+}
+
+.awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide.passed blockquote img {
+    opacity: 0
+}
+
+@media screen and (max-width: 768px) {
+    .awfully-review-testimonials {
+        padding:40px 0
+    }
+
+    .awfully-review-testimonials .awfully-review-testimonials-slider {
+        padding: 0 0px
+    }
+
+    .awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide {
+        max-width: 100%;
+        min-height: unset
+    }
+
+    .awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide blockquote {
+        flex-direction: column-reverse;
+        align-items: center
+    }
+
+    .awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide blockquote .image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px
+    }
+
+    .awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide blockquote .image img {
+        width: 88px;
+        height: 88px
+    }
+
+    .awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide blockquote .image cite {
+        display: flex;
+        max-width: 161px
+    }
+
+    .awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide blockquote .image cite span {
+        font-size: 13px
+    }
+
+    .awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide blockquote .image cite small {
+        font-size: 13px;
+        line-height: 15px
+    }
+
+    .awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide blockquote .content p {
+        font-size: var(--fs-m,24px);
+        text-align: center
+    }
+
+    .awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide blockquote .content cite {
+        display: none
+    }
+
+    .awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide.upcoming {
+        margin-right: unset!important
+    }
+
+    .awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide.upcoming blockquote .content {
+        opacity: 1;
+        max-height: unset
+    }
+
+    .awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide.is-active {
+        margin-right: 24px!important
+    }
+
+    .awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide.is-active blockquote .content {
+        opacity: 1;
+        max-height: 1000px
+    }
+
+    .awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide.passed {
+        margin-right: 24px!important
+    }
+
+    .awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide.passed blockquote img {
+        opacity: 1
+    }
+
+    .awfully-review-testimonials .awfully-review-testimonials-slider .awfully__pagination {
+        position: relative;
+        bottom: 0;
+        padding: 4px 12px;
+        /* background: #000; */
+        border-radius: 100vmax;
+        display: inline-flex;
+        width: fit-content;
+        align-self: center;
+        margin-top: 32px;
+        gap: 6px
+    }
+
+    .awfully-review-testimonials .awfully-review-testimonials-slider .awfully__pagination li {
+        width: 8px;
+        height: 8px;
+        border-radius: 100vmax;
+        display: flex
+    }
+
+    .awfully-review-testimonials .awfully-review-testimonials-slider .awfully__pagination li .awfully__pagination__page {
+        padding: 0;
+        margin: 0;
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+        background: #555
+    }
+
+    .awfully-review-testimonials .awfully-review-testimonials-slider .awfully__pagination li .awfully__pagination__page.is-active {
+        background: #f46a3c;
+        transform: unset
+    }
+}
+
+[data-element="oct-quiz-text oct-quiz-title"] {
+    font-family: "Sohne-Breit"!important
+}
+
+[data-element="oct-quiz-btn oct-quiz-submit-btn oct-quiz-media"] button,[data-element="oct-quiz-btn oct-quiz-skip-btn oct-quiz-media"] button,[data-element="oct-quiz-btn oct-quiz-media"] button {
+    font-family: "Sohne-Breit"!important
+}
+
+[data-element="oct-quiz-text oct-quiz-subheading"] {
+    font-family: "Sohne"!important
+}
+
+[data-display=oct-display] ul {
+    font-family: "Sohne-Breit"!important;
+    display: flex!important;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-weight: 900
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(1px,1px,1px,1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute!important;
+    width: 1px;
+    word-wrap: normal!important
+}
+
+.visually-hidden:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
+    clip: auto!important;
+    clip-path: none;
+    color: #21759b;
+    display: block;
+    font-size: .875rem;
+    font-weight: 700;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000
+}
+
+#primary[tabindex="-1"]:focus {
+    outline: 0
+}
+
+.alignleft {
+    float: left;
+    margin-right: 1.5em;
+    margin-bottom: 1.5em
+}
+
+.alignright {
+    float: right;
+    margin-left: 1.5em;
+    margin-bottom: 1.5em
+}
+
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5em
+}
+
+.select2-container {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    vertical-align: middle;
+    max-width: 100%;
+    width: 100%!important
+}
+
+.select2-container .select2-selection--single {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    height: 56px;
+    user-select: none;
+    -webkit-user-select: none
+}
+
+@media (max-width: 768px) {
+    .select2-container .select2-selection--single {
+        height:52px
+    }
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+    display: block;
+    padding-left: 20px;
+    padding-right: 48px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 56px;
+    color: #000;
+    font-size: 18px;
+    border: 1px solid #000;
+    border-radius: 9px
+}
+
+@media (max-width: 768px) {
+    .select2-container .select2-selection--single .select2-selection__rendered {
+        line-height:52px
+    }
+}
+
+.select2-container .select2-selection--single .select2-selection__clear {
+    position: relative
+}
+
+.select2-container[dir=rtl] .select2-selection--single .select2-selection__rendered {
+    padding-right: 8px;
+    padding-left: 20px
+}
+
+.select2-container .select2-selection--multiple {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    min-height: 32px;
+    user-select: none;
+    -webkit-user-select: none
+}
+
+.select2-container .select2-selection--multiple .select2-selection__rendered {
+    display: inline-block;
+    overflow: hidden;
+    padding-left: 8px;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.select2-container .select2-search--inline {
+    float: left
+}
+
+.select2-container .select2-search--inline .select2-search__field {
+    box-sizing: border-box;
+    border: none;
+    font-size: 100%;
+    margin-top: 5px;
+    padding: 0
+}
+
+.select2-container .select2-search--inline .select2-search__field::-webkit-search-cancel-button {
+    -webkit-appearance: none
+}
+
+.select2-dropdown {
+    background-color: #FFE900;
+    border: 1px solid #000;
+    border-radius: 9px;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    left: -100000px;
+    width: 100%;
+    z-index: 1051
+}
+
+.select2-results {
+    display: block;
+    background: #FFE900!important;
+    border: 1px solid #000000!important;
+    padding: 16px 0!important;
+    z-index: 100;
+    position: relative!important;
+    border-radius: 9px!important;
+    margin-top: 8px!important
+}
+
+.select2-results__options {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.select2-results__option {
+    padding: 12px 16px!important;
+    user-select: none;
+    -webkit-user-select: none;
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: 0;
+    border-bottom: 1px solid #000000!important
+}
+
+.select2-results__option:last-child {
+    border-bottom: 0
+}
+
+.select2-results__option:before {
+    display: none
+}
+
+.select2-results__option[aria-selected] {
+    cursor: pointer
+}
+
+.select2-container--open .select2-dropdown {
+    left: 0
+}
+
+.select2-container--open .select2-dropdown--above {
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0
+}
+
+.select2-container--open .select2-dropdown--below {
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0
+}
+
+.select2-search--dropdown {
+    display: block;
+    padding: 4px
+}
+
+.select2-search--dropdown .select2-search__field {
+    padding: 4px;
+    width: 100%;
+    box-sizing: border-box
+}
+
+.select2-search--dropdown .select2-search__field::-webkit-search-cancel-button {
+    -webkit-appearance: none
+}
+
+.select2-search--dropdown.select2-search--hide {
+    display: none
+}
+
+.select2-close-mask {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-height: 100%;
+    min-width: 100%;
+    height: auto;
+    width: auto;
+    opacity: 0;
+    z-index: 99;
+    background-color: #fff;
+    filter: alpha(opacity=0)
+}
+
+.select2-hidden-accessible {
+    border: 0!important;
+    clip: rect(0 0 0 0)!important;
+    -webkit-clip-path: inset(50%)!important;
+    clip-path: inset(50%)!important;
+    height: 1px!important;
+    overflow: hidden!important;
+    padding: 0!important;
+    position: absolute!important;
+    width: 1px!important;
+    white-space: nowrap!important
+}
+
+.select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: 1px solid #9AA5B1;
+    border-radius: 4px
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #000;
+    font-size: 18px
+}
+
+.select2-container--default .select2-selection--single .select2-selection__clear {
+    cursor: pointer;
+    float: right;
+    font-weight: 700;
+    font-size: 18px
+}
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: #9AA5B1
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 10px;
+    position: absolute;
+    top: 5px;
+    right: 1px;
+    width: 18px
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.163 0a.81.81 0 00-.57.255L8.998 7.991 1.403.255A.81.81 0 00.06.523a.844.844 0 00.187.91L8.42 9.756a.807.807 0 001.156 0l8.173-8.323a.843.843 0 00.188-.92.817.817 0 00-.774-.513z' fill='%23000000' fill-rule='nonzero'/%3E%3C/svg%3E");
+    width: 18px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 16px
+}
