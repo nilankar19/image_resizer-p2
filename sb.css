@@ -1,0 +1,371 @@
+.awfully__container {
+    box-sizing: border-box;
+    position: relative
+}
+
+.awfully__list {
+    backface-visibility: hidden;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    margin: 0 !important;
+    padding: 0 !important
+}
+
+.awfully.is-initialized:not(.is-active) .awfully__list {
+    display: block
+}
+
+.awfully__pagination {
+    -ms-flex-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0;
+    pointer-events: none
+}
+
+.awfully__pagination li {
+    display: inline-block;
+    line-height: 1;
+    list-style-type: none;
+    margin: 0;
+    pointer-events: auto
+}
+
+.awfully:not(.is-overflow) .awfully__pagination {
+    display: none
+}
+
+.awfully__progress__bar {
+    width: 0
+}
+
+.awfully {
+    position: relative;
+    visibility: hidden
+}
+
+.awfully.is-initialized,
+.awfully.is-rendered {
+    visibility: visible
+}
+
+.awfully__slide {
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    list-style-type: none !important;
+    margin: 0;
+    position: relative
+}
+
+.awfully__slide img {
+    vertical-align: bottom
+}
+
+.awfully__spinner {
+    animation: awfully-loading 1s linear infinite;
+    border: 2px solid #999;
+    border-left-color: transparent;
+    border-radius: 50%;
+    bottom: 0;
+    contain: strict;
+    display: inline-block;
+    height: 20px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px
+}
+
+.awfully__sr {
+    clip: rect(0 0 0 0);
+    border: 0;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px
+}
+
+.awfully__toggle.is-active .awfully__toggle__play,
+.awfully__toggle__pause {
+    display: none
+}
+
+.awfully__toggle.is-active .awfully__toggle__pause {
+    display: inline
+}
+
+.awfully__track {
+    overflow: hidden;
+    position: relative;
+    z-index: 0
+}
+
+@keyframes awfully-loading {
+    0% {
+        transform: rotate(0)
+    }
+
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+.awfully__track--draggable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.awfully__track--fade>.awfully__list>.awfully__slide {
+    margin: 0 !important;
+    opacity: 0;
+    z-index: 0
+}
+
+.awfully__track--fade>.awfully__list>.awfully__slide.is-active {
+    opacity: 1;
+    z-index: 1
+}
+
+.awfully--rtl {
+    direction: rtl
+}
+
+.awfully__track--ttb>.awfully__list {
+    display: block
+}
+
+.awfully__arrow {
+    -ms-flex-align: center;
+    align-items: center;
+    background: #ccc;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    display: -ms-flexbox;
+    display: flex;
+    height: 2em;
+    -ms-flex-pack: center;
+    justify-content: center;
+    opacity: .7;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2em;
+    z-index: 1
+}
+
+.awfully__arrow svg {
+    fill: #00000000;
+    height: 1.2em;
+    width: 1.2em
+}
+.awfully_arrow svg{
+    width: 20px;
+    height: 20px;
+}
+.awfully__arrow:hover:not(:disabled) {
+    opacity: .9
+}
+
+.awfully__arrow:disabled {
+    opacity: .3
+}
+
+.awfully__arrow:focus-visible {
+    outline: 3px solid #0bf;
+    outline-offset: 3px
+}
+
+.awfully__arrow--prev {
+    left: 1em
+}
+
+.awfully__arrow--prev svg {
+    transform: scaleX(-1)
+}
+
+.awfully__arrow--next {
+    right: 1em
+}
+
+.awfully.is-focus-in .awfully__arrow:focus {
+    outline: 3px solid #0bf;
+    outline-offset: 3px
+}
+
+.awfully__pagination {
+    bottom: .5em;
+    left: 0;
+    padding: 0 1em;
+    position: absolute;
+    right: 0;
+    z-index: 1
+}
+
+.awfully__pagination__page {
+    background: #ccc;
+    border: 0;
+    border-radius: 50%;
+    display: inline-block;
+    height: 8px;
+    margin: 3px;
+    opacity: .7;
+    padding: 0;
+    position: relative;
+    transition: transform .2s linear;
+    width: 8px
+}
+
+.awfully__pagination__page.is-active {
+    background: #fff;
+    transform: scale(1.4);
+    z-index: 1
+}
+
+.awfully__pagination__page:hover {
+    cursor: pointer;
+    opacity: .9
+}
+
+.awfully__pagination__page:focus-visible {
+    outline: 3px solid #0bf;
+    outline-offset: 3px
+}
+
+.awfully.is-focus-in .awfully__pagination__page:focus {
+    outline: 3px solid #0bf;
+    outline-offset: 3px
+}
+
+.awfully__progress__bar {
+    background: #ccc;
+    height: 3px
+}
+
+.awfully__slide {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+.awfully__slide:focus {
+    outline: 0
+}
+
+@supports(outline-offset:-3px) {
+    .awfully__slide:focus-visible {
+        outline: 3px solid #0bf;
+        outline-offset: -3px
+    }
+}
+
+@media screen and (-ms-high-contrast:none) {
+    .awfully__slide:focus-visible {
+        border: 3px solid #0bf
+    }
+}
+
+@supports(outline-offset:-3px) {
+    .awfully.is-focus-in .awfully__slide:focus {
+        outline: 3px solid #0bf;
+        outline-offset: -3px
+    }
+}
+
+@media screen and (-ms-high-contrast:none) {
+    .awfully.is-focus-in .awfully__slide:focus {
+        border: 3px solid #0bf
+    }
+
+    .awfully.is-focus-in .awfully__track>.awfully__list>.awfully__slide:focus {
+        border-color: #0bf
+    }
+}
+
+.awfully__toggle {
+    cursor: pointer
+}
+
+.awfully__toggle:focus-visible {
+    outline: 3px solid #0bf;
+    outline-offset: 3px
+}
+
+.awfully.is-focus-in .awfully__toggle:focus {
+    outline: 3px solid #0bf;
+    outline-offset: 3px
+}
+
+.awfully__track--nav>.awfully__list>.awfully__slide {
+    border: 3px solid transparent;
+    cursor: pointer
+}
+
+.awfully__track--nav>.awfully__list>.awfully__slide.is-active {
+    border: 3px solid #000
+}
+
+.awfully__arrows--rtl .awfully__arrow--prev {
+    left: auto;
+    right: 1em
+}
+
+.awfully__arrows--rtl .awfully__arrow--prev svg {
+    transform: scaleX(1)
+}
+
+.awfully__arrows--rtl .awfully__arrow--next {
+    left: 1em;
+    right: auto
+}
+
+.awfully__arrows--rtl .awfully__arrow--next svg {
+    transform: scaleX(-1)
+}
+
+.awfully__arrows--ttb .awfully__arrow {
+    left: 50%;
+    transform: translate(-50%)
+}
+
+.awfully__arrows--ttb .awfully__arrow--prev {
+    top: 1em
+}
+
+.awfully__arrows--ttb .awfully__arrow--prev svg {
+    transform: rotate(-90deg)
+}
+
+.awfully__arrows--ttb .awfully__arrow--next {
+    bottom: 1em;
+    top: auto
+}
+
+.awfully__arrows--ttb .awfully__arrow--next svg {
+    transform: rotate(90deg)
+}
+
+.awfully__pagination--ttb {
+    bottom: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    left: auto;
+    padding: 1em 0;
+    right: .5em;
+    top: 0
+}
