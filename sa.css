@@ -735,4 +735,7 @@ blockquote {
       justify-content: center;
       align-items: center;
     }
+    .awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide blockquote {
+        gap: 10px;
+    }
 }
