@@ -717,3 +717,21 @@ blockquote {
     top: 20px;
     right: 16px
 }
+@media screen and (max-width: 719px){
+    .awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide blockquote {
+    flex-direction: row;
+    }
+    .awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide blockquote .image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+    .awfully-review-testimonials .awfully-review-testimonials-slider .awfully__slide blockquote .image cite {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+    }
