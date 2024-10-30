@@ -1,10 +1,10 @@
 function r(n, t) {
   for (var i = 0; i < t.length; i++) {
-    var r = t[i];
-    (r.enumerable = r.enumerable || !1),
-      (r.configurable = !0),
-      "value" in r && (r.writable = !0),
-      Object.defineProperty(n, r.key, r);
+    var rd = t[i];
+    (rd.enumerable = rd.enumerable || !1),
+      (rd.configurable = !0),
+      "value" in rd && (rd.writable = !0),
+      Object.defineProperty(n, rd.key, rd);
   }
 }
 function Jt(n, t, i) {
